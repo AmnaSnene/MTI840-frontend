@@ -6,17 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <title>SOFA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>SOFA</title>
+    <meta http-equiv="refresh" content="10">
+
 </head>
 <body>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Température actuelle</h5>
-        <!--<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-        <p class="card-text">25°C</p>
-        <!--<a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>-->
+
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">S.O.F.A - Smart Operational Fridge App</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2>Température</h2>
+          <h2>Actuelle</h2>
+          <h3>{{temp}}°C</h3>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+
+        <div>
+          <h2>Température</h2>
+          <h2>Maximale</h2>
+          <h3>{{max_temp}}°C</h3>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div>
+          <h2>Ingrédients</h2>
+          <p>{{ingredient}}</p>
+        </div>
       </div>
     </div>
+      {% if temp > max_temp %}
+        <div class="alert alert-danger" role="alert">
+           A simple danger alert—check it out!
+        </div>
+      {%endif%}
+  </div>
+
 </body>
 </html>
