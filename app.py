@@ -1,16 +1,7 @@
 from flask import Flask, request, jsonify, render_template
-import zmq
 
 app = Flask(__name__)
 
-'''
-context = zmq.Context()
-
-#  Socket to talk to server
-print("Connecting to hello world server…")
-socket = context.socket(zmq.REQ)
-socket.connect("tcp://localhost:5555")
-'''
 # intialisation
 temp, max_temp = 0, 0
 ingredient = ''
