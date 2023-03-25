@@ -18,29 +18,28 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="col d-flex align-items-start">
         <div>
-          <h2>Température</h2>
-          <h2>Actuelle</h2>
-          <h3>{{temp}}°C</h3>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-
-        <div>
-          <h2>Température</h2>
-          <h2>Maximale</h2>
-          <h3>{{max_temp}}°C</h3>
+          <h4>Température Actuelle</h4>
+          <h5>{{temp}}°C</h5>
         </div>
       </div>
       <div class="col d-flex align-items-start">
         <div>
-          <h2>Ingrédients</h2>
+          <h4>Ingrédients</h4>
+            {% for i in ingredient %}
+                <p>{% print ("{} : {}").format(i, ingredient[i]) %}</p>
+            {%endfor%}
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div>
+          <h4>Recette</h4>
           <p>{{ingredient}}</p>
         </div>
       </div>
     </div>
       {% if temp > max_temp %}
         <div class="alert alert-danger" role="alert">
-           A simple danger alert—check it out!
+           Attention! La température maximale ne doit pas excéder 25°C
         </div>
       {%endif%}
   </div>
