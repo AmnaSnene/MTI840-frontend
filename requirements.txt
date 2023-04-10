@@ -1,2 +1,6 @@
+transformers
+pip
+jax
+flax
 flask
-paho-mqtt
+paho_mqtt
