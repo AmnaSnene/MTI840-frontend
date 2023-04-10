@@ -27,7 +27,7 @@ client.tls_set(ca_certs='./mti840-frontend/AmazonRootCA1.pem',
                keyfile='./mti840-frontend/79463ac588a3d48b8b07746f94ab5a7bccc39f9b370d2b058ed02b88d6d16b74-private.pem.key',
                tls_version=ssl.PROTOCOL_SSLv23)
 client.tls_insecure_set(True)
-client.connect("a1i1rmybpjbori-ats.iot.us-east-2.amazonaws.com", 8883, 60)  # Taken from REST API endpoint - Use your own.
+client.connect("AWS API", 8883, 60)  # Taken from REST API endpoint - Use your own.
 
 
 def subscribe(Dummy):
